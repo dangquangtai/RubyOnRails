@@ -1,0 +1,37 @@
+<h1>Hiển thị Nhà xuất bản</h1>
+<div class="card-body table-responsive p-0" style="height: 400px;">
+                 <table class="table table-head-fixed text-nowrap">
+                     <thead>
+                         <tr>
+                             <th>mã NXB</th>
+                             <th>tên NXB</th>
+                             <th>Địa chỉ</th>
+                             <th>thông tin</th>
+                              <th>người đại diện</th>
+                            
+                         </tr>
+                     </thead>
+                     <tbody>
+                         <% if @show_company %>
+                         <% @show_company.each do |cate| %>
+                         <tr>
+                             <td>
+                                 <%= cate.tennxb  %>
+                             </td>
+                             <td>
+                                 <%= cate.diachi  %>
+                             </td>
+                             <td>
+                                 <%=cate.email  %>
+                             </td>
+                             <td>
+                                 <%= cate.thongtinnguoidaidien  %>
+                             </td>
+                             
+                            
+                         </tr>
+                         <% end %>
+                         <% end %>
+                     </tbody>
+                 </table>
+             </div>

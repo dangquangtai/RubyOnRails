@@ -1,0 +1,44 @@
+<h1>Hiển thị Sách</h1>
+<div class="card-body table-responsive p-0" style="height: 400px;">
+                 <table class="table table-head-fixed text-nowrap">
+                     <thead>
+                         <tr>
+                         <th>mã sách</th>
+                         <th>tên sách</th>
+                             <th>mã tác giả</th>
+                             <th>mã thể loại</th>
+                             <th>Mã xuất bản</th>
+                             <th>năm xuất bản</th>
+                            
+                         </tr>
+                     </thead>
+                     <tbody>
+                         <% if @show_book %>
+                         <% @show_book.each do |cate| %>
+                         <tr>
+                             <td>
+                                 <%= cate.id  %>
+                             </td>
+                             <td>
+                                 <%= cate.tensach  %>
+                             </td>
+                             <td>
+                                 <%= raw(cate.id)  %>
+                             </td>
+                             <td>
+                                 <%= cate.id  %>
+                             </td>
+                              <td>
+                                 <%= cate.id  %>
+                             </td>
+                               <td>
+                                 <%= cate.namxuatban  %>
+                             </td>
+                             
+                            
+                         </tr>
+                         <% end %>
+                         <% end %>
+                     </tbody>
+                 </table>
+             </div>

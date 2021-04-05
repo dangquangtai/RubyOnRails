@@ -1,0 +1,42 @@
+
+<div class="container">
+<h1 >Đăng nhập</h1>
+    <%= form_for:user,url: xulydangki_path do |f| %>
+  <div class="row">
+    <div class="col-sm-6">
+    <div class="form-floating mb-3">
+    <label for="floatingInput">Email address</label>
+              <%= f.text_field :email, class: "form-control", placeholder: "name@example.com" %>
+  
+</div>
+    </div>
+    <div class="col-sm-6"></div>
+       <div class="col-sm-6">
+   <div class="form-floating">
+   <label for="floatingInput">Password</label>
+              <%= f.password_field :password, class: "form-control", placeholder: "Password" %>
+  
+
+</div>
+    </div>
+     <div class="col-sm-6"></div>
+   <div class="col-sm-6">
+   <div class="form-floating">
+   <label for="floatingInput">Repeat Password</label>
+              <%= f.password_field :password_confirmation, class: "form-control", placeholder: "Repeat Password" %>
+   
+  
+</div>
+    </div>
+    <div class="col-sm-6"></div>
+      <div class="col-sm-6">
+                <%= f.submit "Register", class: "btn btn-success" %>
+   
+      </div>
+  </div>
+      <% end %>
+</div>
+
+
+
+

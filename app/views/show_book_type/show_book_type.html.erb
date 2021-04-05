@@ -1,0 +1,30 @@
+<h1>Hiển thị loại sách</h1>
+<div class="card-body table-responsive p-0" style="height: 400px;">
+                 <table class="table table-head-fixed text-nowrap">
+                     <thead>
+                         <tr>
+                             <th>mã thể loại</th>
+                             <th>tên thể loại</th>
+                             
+                            
+                         </tr>
+                     </thead>
+                     <tbody>
+                         <% if @show_book_type %>
+                         <% @show_book_type.each do |cate| %>
+                         <tr>
+                             <td>
+                                 <%= cate.id  %>
+                             </td>
+                             <td>
+                                 <%= cate.tentheloai  %>
+                             </td>
+                            
+                             
+                            
+                         </tr>
+                         <% end %>
+                         <% end %>
+                     </tbody>
+                 </table>
+             </div>

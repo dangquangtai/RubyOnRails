@@ -1,0 +1,36 @@
+<h1>Hiển thị tác giả</h1>
+<div class="card-body table-responsive p-0" style="height: 400px;">
+                 <table class="table table-head-fixed text-nowrap">
+                     <thead>
+                         <tr>
+                             <th>mã tác giả</th>
+                             <th>tên tác giả</th>
+                             <th>website</th>
+                             <th>ghi chú</th>
+                            
+                         </tr>
+                     </thead>
+                     <tbody>
+                         <% if @show_author %>
+                         <% @show_author.each do |cate| %>
+                         <tr>
+                             <td>
+                                 <%= cate.id  %>
+                             </td>
+                             <td>
+                                 <%= cate.tentacgia  %>
+                             </td>
+                             <td>
+                                 <%= raw(cate.website)  %>
+                             </td>
+                             <td>
+                                 <%= cate.ghichu  %>
+                             </td>
+                             
+                            
+                         </tr>
+                         <% end %>
+                         <% end %>
+                     </tbody>
+                 </table>
+             </div>

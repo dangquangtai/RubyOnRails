@@ -1,5 +1,5 @@
 class ShowBookController < ApplicationController
-    def show_Book
+    def show_book
         @show_book = Book.all
     end
   

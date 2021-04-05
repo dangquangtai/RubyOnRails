@@ -1,6 +1,6 @@
 class ShowBookTypeController < ApplicationController
-    def show_author
-        @showBookType = BookType.all
+    def show_book_type
+        @show_book_type = BookType.all
     end
    
 end

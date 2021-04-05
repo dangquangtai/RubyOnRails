@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_05_062340) do
+ActiveRecord::Schema.define(version: 2021_04_05_093648) do
 
   create_table "authors", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "tentacgia"
@@ -25,6 +25,12 @@ ActiveRecord::Schema.define(version: 2021_04_05_062340) do
   create_table "books", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "tensach"
     t.string "namxuatban"
+    t.bigint "authors_id"
+    t.bigint "book_types_id"
+    t.bigint "companies_id"
+    t.index ["authors_id"], name: "index_books_on_authors_id"
+    t.index ["book_types_id"], name: "index_books_on_book_types_id"
+    t.index ["companies_id"], name: "index_books_on_companies_id"
   end
 
   create_table "companies", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
@@ -34,4 +40,7 @@ ActiveRecord::Schema.define(version: 2021_04_05_062340) do
     t.string "thongtinnguoidaidien"
   end
 
+  add_foreign_key "books", "authors", column: "authors_id"
+  add_foreign_key "books", "book_types", column: "book_types_id"
+  add_foreign_key "books", "companies", column: "companies_id"
 end
